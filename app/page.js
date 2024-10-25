@@ -1,13 +1,9 @@
 import Image from "next/image";
 import Header from "./components/header";
-import FTTlogo from "../app/images/logo.png"
-import WivesHubLogo from "../app/images/wiveshub.png"
-import DJlogo from "../app/images/dailyjugarr.png"
-import moazzam from "../app/images/moazzam.png"
-import naveed from "../app/images/naveed.png"
-import nabeel from "../app/images/nabeel.png"
-import aftab from "../app/images/aftab.jpg"
-import Link from "next/link";
+import AWI from "../app/images/AWI.png"
+import commingsoon from "../app/images/coming-soon.png"
+import profile from "../app/images/profile.png"
+import nawab from "../app/images/moazzam.png"
 
 export default function Home() {
   return (
@@ -65,9 +61,9 @@ export default function Home() {
               <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-8 shadow-lg rounded-lg">
                 <div className="px-4 py-5 flex-auto">
                   {/* <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"> */}
-                  <Image className="p-3 inline-flex items-center justify-center mb-5" src={DJlogo} width={180} />
+                  <Image className="p-3 inline-flex items-center justify-center mb-5" src={commingsoon} width={180} alt="Comming_Soon" />
                   {/* </div> */}
-                  <h6 className="text-white text-xl font-semibold">Daily Jugarr</h6>
+                  <h6 className="text-white text-xl font-semibold">Comming Soon</h6>
                   <p className="mt-2 mb-4 text-gray-300">
                     Divide details about your product or agency work into parts. A paragraph describing a feature will be enough.
                   </p>
@@ -79,10 +75,10 @@ export default function Home() {
               <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-8 shadow-lg rounded-lg">
                 <div className="px-4 py-5 flex-auto">
                   {/* <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-blue-400"> */}
-                  <Image className="p-3 inline-flex items-center justify-center mb-5" src={FTTlogo} width={200} />
+                  <Image className="p-3 inline-flex items-center justify-center mb-5" src={AWI} width={200} alt="Logo"/>
                   {/* </div> */}
                   <h6 className="text-white text-xl font-semibold">
-                    Fashion Tips & Tricks
+                    All World Insurrance
                   </h6>
                   <p className="mt-2 mb-4 text-gray-300">
                     Keep you user engaged by providing meaningful information. Remember that by this time, the user is curious.
@@ -95,10 +91,10 @@ export default function Home() {
               <div className="relative flex flex-col min-w-0 break-words bg-gray-800 w-full mb-8 shadow-lg rounded-lg">
                 <div className="px-4 py-5 flex-auto">
                   {/* <div className="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-green-400"> */}
-                  <Image className="p-3 inline-flex items-center justify-center mb-5" src={WivesHubLogo} width={180} />
+                  <Image className="p-3 inline-flex items-center justify-center mb-5" src={commingsoon} width={180} alt="Comming_Soon"/>
                   {/* </div> */}
                   <h6 className="text-white text-xl font-semibold">
-                    Wives Hub
+                    Comming Soon
                   </h6>
                   <p className="mt-2 mb-4 text-gray-300">
                     Write a few lines about each one. A paragraph describing a feature will be enough. Keep you user engaged!
@@ -282,7 +278,7 @@ export default function Home() {
                   className="shadow-lg rounded-full max-w-full mx-auto"
                   style={{ maxWidth: "120px" }}
                 /> */}
-                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={moazzam} width={120} />
+                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={nawab} width={120} alt="Nawab_Moazzam"/>
                 <div className="pt-6 text-center">
                   <h5 className="text-white text-xl font-bold">
                     Nawab Moazzam
@@ -321,10 +317,10 @@ export default function Home() {
                   className="shadow-lg rounded-full max-w-full mx-auto"
                   style={{ maxWidth: "120px" }}
                 /> */}
-                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={nabeel} width={120} />
+                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={profile} width={120} alt="Profile"/>
                 <div className="pt-6 text-center">
                   <h5 className="text-white text-xl font-bold">
-                    Nabeel Ameen
+                    Person
                   </h5>
                   <p className="mt-1 text-sm text-gray-400 uppercase font-semibold">
                     Marketing Specialist
@@ -354,10 +350,10 @@ export default function Home() {
                   className="shadow-lg rounded-full max-w-full mx-auto"
                   style={{ maxWidth: "120px" }}
                 /> */}
-                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={aftab} width={120} />
+                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={profile} width={120} alt="Profile"/>
                 <div className="pt-6 text-center">
                   <h5 className="text-white text-xl font-bold">
-                    Aftab Ahmad
+                    Person
                   </h5>
                   <p className="mt-1 text-sm text-gray-400 uppercase font-semibold">
                     Co-Founder
@@ -393,10 +389,10 @@ export default function Home() {
                   className="shadow-lg rounded-full max-w-full mx-auto"
                   style={{ maxWidth: "120px" }}
                 /> */}
-                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={naveed} width={120} />
+                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={profile} width={120} alt="Profile"/>
                 <div className="pt-6 text-center">
                   <h5 className="text-white text-xl font-bold">
-                    Naveed Ameen
+                    Person
                   </h5>
                   <p className="mt-1 text-sm text-gray-400 uppercase font-semibold">
                     Founder and CEO
