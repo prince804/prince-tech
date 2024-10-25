@@ -1,7 +1,7 @@
 import { BetaAnalyticsDataClient } from "@google-analytics/data";
 import { NextResponse } from "next/server";
 
-const propertyId = '329824737';
+const propertyId = '462274984';
 
 // Initialize the Google Analytics Data API client
 const analyticsDataClient = new BetaAnalyticsDataClient({
