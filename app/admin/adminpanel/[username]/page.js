@@ -188,6 +188,13 @@ const UserStats = ({ params }) => {
                                     </td>
                                 </tr>
                             }
+                            {campaignData?.payments?.length <= 0 &&
+                                <tr className="bg-gray-800 border-b border-gray-700 hover:bg-gray-600">
+                                    <th colSpan={"7"} scope="row" className="px-6 py-4 font-medium text-center whitespace-nowrap text-white">
+                                        No Data Available Yet!
+                                    </th>
+                                </tr>
+                            }
                             {campaignData?.payments?.length > 0 && campaignData.payments.map((item, index) => {
                                 return (
                                     <tr key={index} className="border-b bg-gray-800 border-gray-700 hover:bg-gray-600">
