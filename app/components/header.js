@@ -4,7 +4,6 @@ import React from 'react'
 import Cookies from 'js-cookie';
 import { usePathname, useRouter } from 'next/navigation'
 import { useState, useEffect } from 'react';
-import logo from "../images/logo.png"
 import Image from 'next/image';
 import { toast } from 'react-toastify';
 
