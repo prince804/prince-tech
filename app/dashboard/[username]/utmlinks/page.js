@@ -125,6 +125,7 @@ export default function UTMLinks() {
   }
 
   function decode(str) {
+    str = str.replace(/&amp;/g, '&');
     return str.replace(/(&#(\d+);)/g, function (match, capture, charCode) {
       return String.fromCharCode(charCode);
     });
@@ -178,7 +179,7 @@ export default function UTMLinks() {
               <select className='w-full h-10 rounded-lg bg-gray-700 px-4' onChange={handleCategoryChange}>
                 <option className='rounded-full' value={""}>Select a Category</option>
                 {categories.map((category) => {
-                  return (<option key={category.categoryId} className='rounded-full' value={category.categoryId}>{category.name}</option>)
+                  return (<option key={category.categoryId} className='rounded-full' value={category.categoryId}>{decode(category.name)}</option>)
                 })}
               </select>
             }

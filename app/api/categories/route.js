@@ -24,6 +24,9 @@ export async function POST() {
         }));
 
         await Category.bulkWrite(bulkOps); // Perform the bulk write operation
+        const newCategoryIds = Categories.map(category => category.id);
+        await Category.deleteMany({ categoryId: { $nin: newCategoryIds } });
+        
         return NextResponse.json({ message: `All Categories are Updated in Data Base` });
     } catch (error) {
         return NextResponse.json({ message: `Error Updating Categories: ${error.message}` });
