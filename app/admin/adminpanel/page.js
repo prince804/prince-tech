@@ -107,7 +107,7 @@ const Admimpanel = () => {
         <>
             <AdminHeader />
             <main className="relative">
-                <h1 className="mb-4 text-4xl text-center font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-white">Dashboard Admin’s Panel</h1>
+                <h1 className="mb-4 text-4xl text-center font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-white">Prince Tech Admin’s Panel</h1>
                 <div className="w-[80vw] mx-auto mt-4 relative shadow-md sm:rounded-lg">
                     <div className="bg-gray-900 flex justify-between items-center flex-wrap gap-2 p-1">
                         <div className="relative mx-1 w-1/2">

@@ -6,6 +6,7 @@ import React from 'react'
 import { useState } from 'react';
 import { useForm } from "react-hook-form"
 import { toast } from 'react-toastify';
+import logo from "../images/logo.png"
 
 const AdminHeader = () => {
     const router = useRouter();
@@ -75,7 +76,7 @@ const AdminHeader = () => {
                 <nav className="border-gray-200 bg-gray-900">
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                         <Link href="/admin/adminpanel" className="flex items-center space-x-3 rtl:space-x-reverse">
-                            <Image src="https://flowbite.com/docs/images/logo.svg" className="w-auto h-auto" alt="Logo" width="32" height="32" />
+                            <Image src={logo} className="w-auto h-auto rounded-full" alt="Logo" width="32" height="32" />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Admin Panel</span>
                         </Link>
                         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
