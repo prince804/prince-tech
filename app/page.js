@@ -6,6 +6,7 @@ import profile from "../app/images/profile.png"
 import nawab from "../app/images/moazzam.png"
 import haroon from "../app/images/haroon.jpg"
 import aftab from "../app/images/aftab.jpg"
+import asif from "../app/images/asif.jpg"
 import Link from "next/link";
 
 export default function Home() {
@@ -310,10 +311,10 @@ export default function Home() {
                   className="shadow-lg rounded-full max-w-full mx-auto"
                   style={{ maxWidth: "120px" }}
                 /> */}
-                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={profile} width={180} alt="Profile"/>
+                <Image className="shadow-lg rounded-full max-w-full mx-auto" src={asif} width={180} alt="Mohammad Asif"/>
                 <div className="pt-6 text-center">
                   <h5 className="text-white text-xl font-bold">
-                    Person
+                    Muhammad Asif
                   </h5>
                   <p className="mt-1 text-sm text-gray-400 uppercase font-semibold">
                     Marketing Specialist
