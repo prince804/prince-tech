@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-        <link rel="shortcut icon" href="/static/favicon.ico" />
+        <link rel="shortcut icon" href="/static/favicon.png" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-900 pb-14`}>
         <ToastWrapper />
