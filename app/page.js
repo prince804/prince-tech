@@ -212,7 +212,7 @@ export default function Home() {
                   A growing company
                 </h3>
                 <p className="mt-4 text-lg leading-relaxed text-gray-300">
-                  We generate the industrys highest conversion rates and drive over 1.5B readers yearly. FashionTips&Tricks affiliate team is looking for partners that want to launch a new and scalable revenue stream.
+                  We generate the industrys highest conversion rates and drive over 1.5B readers yearly. <strong>Prince Tech</strong> affiliate team is looking for partners that want to launch a new and scalable revenue stream.
                 </p>
                 <ul className="list-none mt-6">
                   <li className="py-2">
