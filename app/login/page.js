@@ -103,7 +103,7 @@ const Login = () => {
                             </button>
                         }
                         <p className="text-xs mt-3">We are no longer offering <b>Self Registration</b>. If you would like an account, please email us at:
-                            <a className='font-bold mx-1' href="mailto:cnstatus310@gmail.com">cnstatus310@gmail.com</a></p>
+                            <a className='font-bold mx-1' href="mailto:princetechus46@gmail.com">princetechus46@gmail.com</a></p>
                     </form>
                 </div>
             </section>
