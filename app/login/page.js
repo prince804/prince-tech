@@ -58,11 +58,11 @@ const Login = () => {
                         <h2 className="text-white text-lg font-medium title-font mb-5">Sign In</h2>
                         <div className="relative mb-4">
                             <label htmlFor="username" className="leading-7 text-sm text-gray-400">Username</label>
-                            <input onBeforeInput={() => { clearErrors("formErrors") }} type="text" {...register("username", { required: true })} className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input onFocus={() => { clearErrors("formErrors") }} type="text" {...register("username", { required: true })} className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none text-gray-100 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" />
                         </div>
                         <div className="relative mb-4">
                             <label htmlFor="password" className="leading-7 text-sm text-gray-400">Password</label>
-                            <input onBeforeInput={() => { clearErrors("formErrors") }} type={showPass ? "text" : "password"} {...register("password", { required: true })} className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none text-gray-100 py-1 pl-3 pr-10 leading-8 transition-colors duration-200 ease-in-out" />
+                            <input onFocus={() => { clearErrors("formErrors") }} type={showPass ? "text" : "password"} {...register("password", { required: true })} className="w-full bg-gray-600 bg-opacity-20 focus:bg-transparent focus:ring-2 focus:ring-blue-900 rounded border border-gray-600 focus:border-blue-500 text-base outline-none text-gray-100 py-1 pl-3 pr-10 leading-8 transition-colors duration-200 ease-in-out" />
                             <span onClick={(e) => { e.preventDefault(); setShowPass(!showPass) }} className='absolute top-1/2 right-2 cursor-pointer'>
                                 {!showPass &&
                                     <lord-icon

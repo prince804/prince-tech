@@ -54,11 +54,11 @@ const Admin = () => {
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 md:space-y-6">
                             <div>
                                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-white">Admin Username</label>
-                                <input onBeforeInput={() => { clearErrors("formErrors") }} type="text" {...register("username", { required: true })} className="border rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Username" />
+                                <input onFocus={() => { clearErrors("formErrors") }} type="text" {...register("username", { required: true })} className="border rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="Username" />
                             </div>
                             <div className="relative">
                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-white">Admin Password</label>
-                                <input onBeforeInput={() => { clearErrors("formErrors") }} type={showPass ? "text" : "password"} {...register("password", { required: true })} placeholder="••••••••" className="border rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" />
+                                <input onFocus={() => { clearErrors("formErrors") }} type={showPass ? "text" : "password"} {...register("password", { required: true })} placeholder="••••••••" className="border rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-blue-500 focus:border-blue-500" />
                                 <span onClick={(e) => { e.preventDefault(); setShowPass(!showPass) }} className='absolute top-1/2 right-2 cursor-pointer'>
                                     {!showPass &&
                                         <lord-icon

@@ -136,11 +136,11 @@ const AdminHeader = () => {
                             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                                 <div>
                                     <label htmlFor="oldUsername" className="block mb-2 text-sm font-medium text-white">Old Username</label>
-                                    <input type="text" onBeforeInput={() => { clearErrors("formErrors") }} {...register("oldUsername", { required: true })} placeholder="Enter new Username" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
+                                    <input type="text" onFocus={() => { clearErrors("formErrors") }} {...register("oldUsername", { required: true })} placeholder="Enter new Username" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
                                 </div>
                                 <div className='relative'>
                                     <label htmlFor="oldPassword" className="block mb-2 text-sm font-medium text-white">Old Password</label>
-                                    <input type={showPass ? "text" : "password"} onBeforeInput={() => { clearErrors("formErrors") }} {...register("oldPassword", { required: true })} className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Enter Old Password" />
+                                    <input type={showPass ? "text" : "password"} onFocus={() => { clearErrors("formErrors") }} {...register("oldPassword", { required: true })} className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Enter Old Password" />
                                     <span onClick={(e) => { e.preventDefault(); setShowPass(!showPass) }} className='absolute top-1/2 right-2 cursor-pointer'>
                                         {!showPass &&
                                             <lord-icon
@@ -164,11 +164,11 @@ const AdminHeader = () => {
                                 </div>
                                 <div>
                                     <label htmlFor="newUsername" className="block mb-2 text-sm font-medium text-white">New Username</label>
-                                    <input type="text" onBeforeInput={() => { clearErrors("formErrors") }} {...register("newUsername", { required: true })} placeholder="Enter new Username" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
+                                    <input type="text" onFocus={() => { clearErrors("formErrors") }} {...register("newUsername", { required: true })} placeholder="Enter new Username" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
                                 </div>
                                 <div className='relative'>
                                     <label htmlFor="newPassword" className="block mb-2 text-sm font-medium text-white">New Password</label>
-                                    <input type={showPass ? "text" : "password"} onBeforeInput={() => { clearErrors("formErrors") }} {...register("newPassword", { required: true })} placeholder="Enter New Password" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
+                                    <input type={showPass ? "text" : "password"} onFocus={() => { clearErrors("formErrors") }} {...register("newPassword", { required: true })} placeholder="Enter New Password" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
                                     <span onClick={(e) => { e.preventDefault(); setShowPass(!showPass) }} className='absolute top-1/2 right-2 cursor-pointer'>
                                         {!showPass &&
                                             <lord-icon

@@ -139,15 +139,15 @@ const Admimpanel = () => {
                                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
                                             <div>
                                                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-white">Username</label>
-                                                <input type="text" onBeforeInput={() => { clearErrors("formErrors") }} {...register("username", { required: true })} className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Enter Username" />
+                                                <input type="text" onFocus={() => { clearErrors("formErrors") }} {...register("username", { required: true })} className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Enter Username" />
                                             </div>
                                             <div>
                                                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-white">Password</label>
-                                                <input type="text" onBeforeInput={() => { clearErrors("formErrors") }} {...register("password", { required: true })} placeholder="••••••••" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
+                                                <input type="text" onFocus={() => { clearErrors("formErrors") }} {...register("password", { required: true })} placeholder="••••••••" className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" />
                                             </div>
                                             <div>
                                                 <label htmlFor="commission" className="block mb-2 text-sm font-medium text-white">Commission</label>
-                                                <input type='number' min="0" max="100" onBeforeInput={() => { clearErrors("formErrors") }} {...register("commission", { required: true })} className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Enter Commission" />
+                                                <input type='number' min="0" max="100" onFocus={() => { clearErrors("formErrors") }} {...register("commission", { required: true })} className="border text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 bg-gray-600 border-gray-500 placeholder-gray-400 text-white" placeholder="Enter Commission" />
                                             </div>
                                             {errors.formErrors && <span className='text-red-600 font-bold'>{errors.formErrors.message}</span>}
                                             {!isSubmitting &&
