@@ -328,7 +328,7 @@ const UserStats = ({ params }) => {
                                     Total Revenue
                                 </th>
                                 <th scope="col" className="px-2 py-3">
-                                    Profit(-20%)
+                                Profit(-{campaignData.commission}%)
                                 </th>
                                 <th scope="col" className="px-2 py-3">
                                     Final Revenue
