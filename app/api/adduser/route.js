@@ -8,7 +8,7 @@ export async function POST(request) {
     const { headers } = await request;
     const origin = await headers.get('origin');
 
-    const { username, password, commission } = await request.json();
+    const { email, username, password, commission } = await request.json();
     // Connect to the database
     await dbConnect();
 
@@ -34,7 +34,8 @@ export async function POST(request) {
         const currentRevenue = payments.reduce((total, item) =>total + Number(item.revenue), 0);
         const user = new User(
             {
-                username: username,
+                email,
+                username,
                 password: bcrypt.hashSync(password, 10),
                 commission: commission,
                 currentRevenue: currentRevenue,
