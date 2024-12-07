@@ -388,7 +388,7 @@ export default function Home() {
                   </p>
                   <div className="mt-3 flex items-center justify-center gap-1">
                     <Link
-                      href={"https://portfolio-nine-taupe-29.vercel.app"}
+                      href={"https://nawab-dev.vercel.app"}
                       target="blank"
                       className="w-11 h-11"
                     >
