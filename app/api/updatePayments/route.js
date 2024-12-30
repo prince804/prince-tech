@@ -38,7 +38,7 @@ export async function POST(request) {
                     fieldName: "firstUserCampaignName",
                     stringFilter: {
                         matchType: "ENDS_WITH",
-                        value: username // Filter campaigns containing the username dynamically
+                        value: `_${username}` // Filter campaigns containing the username dynamically
                     }
                 }
             },

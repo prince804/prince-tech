@@ -38,7 +38,7 @@ export async function POST(request) {
                     fieldName: "firstUserCampaignName",
                     stringFilter: {
                         matchType: "ENDS_WITH",
-                        value: utm // Pass utmSource dynamically
+                        value: `_${utm}` // Pass utmSource dynamically
                     }
                 }
             }
@@ -59,8 +59,8 @@ export async function POST(request) {
             return {
                 campaign: row.dimensionValues[0].value, // Second dimension (firstUserCampaignName)
                 users: totalUsers,                      // Users for this campaign
-                revenue: totalRevenue.toFixed(2),                  // Revenue for this campaign
-                rpm: rpm.toFixed(2)                     // RPM for this campaign, rounded to 2 decimal places
+                revenue: totalRevenue,                  // Revenue for this campaign
+                rpm: rpm                                    // RPM for this campaign, rounded to 2 decimal places
             };
         });
 
