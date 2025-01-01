@@ -371,7 +371,7 @@ const UserStats = ({ params }) => {
                                             {item.campaign}
                                         </td>
                                         <td className="px-6 py-4">
-                                            ${item.revenue}
+                                            ${item.revenue.toFixed(2)}
                                         </td>
                                         <td className="px-6 py-4">
                                             ${((campaignData.commission / 100) * item.revenue).toFixed(2)}
@@ -380,7 +380,7 @@ const UserStats = ({ params }) => {
                                             ${(item.revenue - ((campaignData.commission / 100) * item.revenue)).toFixed(2)}
                                         </td>
                                         <td className="px-6 py-4">
-                                            ${item.rpm}
+                                            ${item.rpm.toFixed(2)}
                                         </td>
                                         <td className="px-6 py-4">
                                             {item.users}
@@ -395,7 +395,7 @@ const UserStats = ({ params }) => {
                                 <td className="px-6 py-3">${totalRevenue.toFixed(2)}</td>
                                 <td className="px-6 py-3">${((campaignData.commission / 100) * totalRevenue).toFixed(2)}</td>
                                 <td className="px-6 py-3">${(totalRevenue - ((campaignData.commission / 100) * totalRevenue)).toFixed(2)}</td>
-                                <td className="px-6 py-3">${(totalRPM / utmData.length).toFixed(2)}</td>
+                                <td className="px-6 py-3">${(totalRevenue / totalUsers * 1000).toFixed(2)}</td>
                                 <td className="px-6 py-3">{totalUsers}</td>
                             </tr>
                         </tfoot>
