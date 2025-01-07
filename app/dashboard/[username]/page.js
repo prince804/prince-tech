@@ -180,7 +180,7 @@ export default function Dashboard() {
                                 <p className="leading-relaxed">Average RPM</p>
                             </div>
                             <div className="p-4 sm:w-1/4 w-1/2">
-                                <h2 className="title-font font-medium sm:text-4xl text-3xl text-white">${maxRPM}</h2>
+                                <h2 className="title-font font-medium sm:text-4xl text-3xl text-white">${maxRPM.toFixed(0)}</h2>
                                 <p className="leading-relaxed">Best RPM</p>
                             </div>
                         </div>
