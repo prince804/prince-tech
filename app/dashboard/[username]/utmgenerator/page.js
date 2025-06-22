@@ -61,6 +61,8 @@ export default function UtmGenerator() {
             if (link.endsWith("/")) { link = link.slice(0, -1); }
             let newlink = break_address(link);
             if (newlink) {
+                link = link.replace(/^https:\/\/ketosl\.com/, "https://apkbright.com");
+
                 // Construct the final URL with UTM parameters
                 return `${link}?utm_campaign=${newlink.title}_${username}&utm_medium=link&utm_source=link_${username}`;
             }
