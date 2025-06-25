@@ -3,14 +3,8 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/go',
-        has: [
-          {
-            type: 'query',
-            key: 'utm_campaign',
-          },
-        ],
-        destination: '/dashboard/:utm_campaign',
+        source: '/go/:slug',
+        destination: '/dashboard/:slug',
         permanent: false,
       },
     ];
