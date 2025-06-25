@@ -23,3 +23,8 @@ export default function ClientComponent({ username }) {
     </div>
   )
 }
+import ClientComponent from './client'
+
+export default function Page({ params }) {
+  return <ClientComponent username={params.username} />
+}
