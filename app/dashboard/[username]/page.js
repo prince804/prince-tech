@@ -7,15 +7,23 @@ export default function Page({ params }) {
   const pathname = usePathname()
   const searchParams = useSearchParams()
   const username = params.username
-    
+
   useEffect(() => {
-  const utm = searchParams.get('utm_campaign')
-  if (utm !== username) {
-    const newParams = new URLSearchParams(searchParams.toString())
-    newParams.set('utm_campaign', username)
-    router.replace(`${pathname}?${newParams.toString()}`)
-  }
-}, [username, pathname, searchParams, router])
+    const utm = searchParams.get('utm_campaign')
+    if (utm !== username) {
+      const newParams = new URLSearchParams(searchParams.toString())
+      newParams.set('utm_campaign', username)
+      router.replace(`${pathname}?${newParams.toString()}`)
+    }
+  }, [username, pathname, searchParams, router])
+
+  return (
+    <div className="p-4 text-white">
+      <h1 className="text-2xl font-bold">Welcome, {username}</h1>
+      <p>This is your dashboard. UTM is locked to your name ✅</p>
+    </div>
+  )
+}
 
     const {
         register,
