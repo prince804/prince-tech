@@ -8,7 +8,9 @@ export default function Page({ params }) {
   const searchParams = useSearchParams()
   const username = params.username
 
-  useEffect(() => {
+  useEffect((console.log('Current UTM:', utm)
+console.log('Expected Username:', username)
+) => {
     const utm = searchParams.get('utm_campaign')
     if (utm !== username) {
       const newParams = new URLSearchParams(searchParams.toString())
