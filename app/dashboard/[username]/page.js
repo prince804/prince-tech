@@ -1,24 +1,30 @@
-"use client"
+'use client'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-import Header from '@/app/components/header';
-import Cookies from 'js-cookie';
-import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
-import { useForm } from "react-hook-form";
-import { toast } from 'react-toastify';
+import React, { useEffect, useState } from 'react'
 
-export default function Dashboard() {
-    const router = useRouter();
-    const [username, setUsername] = useState('');
-    const [totalRevenue, setTotalRevenue] = useState(0);
-    const [totalRPM, setTotalRPM] = useState(0);
-    const [maxRevenue, setMaxRevenue] = useState(0.0);
-    const [maxRPM, setMaxRPM] = useState(0);
-    const [dataLegth, setDataLegth] = useState(0);
-    const [campaignData, setCampaignData] = useState([]);
-    const [hideReset, setHideReset] = useState(true);
-    const [showPass, setShowPass] = useState(false);
-    const utm = username;
+export default function Page({ params }) {
+  const router = useRouter()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+  const username = params.username   // ✅ slug from URL
+
+  const [totalRevenue, setTotalRevenue] = useState(0)
+  const [totalRPM, setTotalRPM] = useState(0)
+  const [maxRevenue, setMaxRevenue] = useState(0.0)
+  const [maxRPM, setMaxRPM] = useState(0)
+  const [dataLegth, setDataLegth] = useState(0)
+  const [campaignData, setCampaignData] = useState([])
+  const [hideReset, setHideReset] = useState(true)
+  const [showPass, setShowPass] = useState(false)
+    
+  useEffect(() => {
+    const utm = searchParams.get('utm_campaign')
+    if (utm !== username) {
+      const newParams = new URLSearchParams(searchParams.toString())
+      newParams.set('utm_campaign', username)
+      router.replace(`${pathname}?${newParams.toString()}`)
+    }
+  }, [username, pathname, searchParams, router])
 
     const {
         register,
