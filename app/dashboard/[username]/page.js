@@ -1,10 +1,9 @@
 "use client"
-import { useRouter } from 'next/navigation'
+import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import Header from '@/app/components/header';
 import Cookies from 'js-cookie';
 import Link from 'next/link';
-import React from 'react'
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import { toast } from 'react-toastify';
 
