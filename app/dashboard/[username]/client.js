@@ -1,3 +1,7 @@
+import ClientComponent from './client'
+export default function Page({ params }) {
+  return <ClientComponent username={params.username} />
+}
 'use client'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
@@ -23,8 +27,4 @@ export default function ClientComponent({ username }) {
     </div>
   )
 }
-import ClientComponent from './client'
 
-export default function Page({ params }) {
-  return <ClientComponent username={params.username} />
-}
