@@ -8,10 +8,12 @@ export default function Page({ params }) {
   const searchParams = useSearchParams()
   const username = params.username
 
-  useEffect((console.log('Current UTM:', utm)
-console.log('Expected Username:', username)
-) => {
+  useEffect(() => {
     const utm = searchParams.get('utm_campaign')
+
+    console.log(' Current UTM:', utm)
+    console.log(' Expected Username from URL:', username)
+
     if (utm !== username) {
       const newParams = new URLSearchParams(searchParams.toString())
       newParams.set('utm_campaign', username)
@@ -22,7 +24,7 @@ console.log('Expected Username:', username)
   return (
     <div className="p-4 text-white">
       <h1 className="text-2xl font-bold">Welcome, {username}</h1>
-      <p>This is your dashboard. UTM is locked to your name ✅</p>
+      <p>Debug console log added for UTM tracking </p>
     </div>
   )
 }
