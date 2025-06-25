@@ -1,3 +1,4 @@
+import ClientComponent from './client'
 'use client'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import React, { useEffect } from 'react'
