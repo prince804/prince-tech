@@ -1,21 +1,14 @@
-import ClientComponent from './client'
+'use client'
+import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import React, { useEffect } from 'react'
 
-export default function Page({ params }) {
-  return <ClientComponent username={params.username} />
-}
-
-export default function Page({ params }) {
+export default function ClientComponent({ username }) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const username = params.username
 
   useEffect(() => {
     const utm = searchParams.get('utm_campaign')
-
-    console.log(' Current UTM:', utm)
-    console.log(' Expected Username from URL:', username)
-
     if (utm !== username) {
       const newParams = new URLSearchParams(searchParams.toString())
       newParams.set('utm_campaign', username)
@@ -26,11 +19,10 @@ export default function Page({ params }) {
   return (
     <div className="p-4 text-white">
       <h1 className="text-2xl font-bold">Welcome, {username}</h1>
-      <p>Debug console log added for UTM tracking </p>
+      <p>UTM updated if mismatched </p>
     </div>
   )
 }
-
     const {
         register,
         handleSubmit,
