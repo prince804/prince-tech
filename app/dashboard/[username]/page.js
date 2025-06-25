@@ -6,7 +6,7 @@ export default function Page({ params }) {
   const router = useRouter()
   const pathname = usePathname()
   const searchParams = useSearchParams()
-  const username = params.username   // ✅ slug from URL
+  const username = params.username   
 
   const [totalRevenue, setTotalRevenue] = useState(0)
   const [totalRPM, setTotalRPM] = useState(0)
