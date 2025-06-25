@@ -1,6 +1,6 @@
 'use client'
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 
 export default function Page({ params }) {
   const router = useRouter()
