@@ -11,14 +11,6 @@ import { toast } from "react-toastify";
 export default function Dashboard() {
   const router = useRouter();
 const [utm, setUtm] = useState("");
-
-// 🔁 Sync username to utm automatically
-useEffect(() => {
-  if (username && utm !== username) {
-    setUtm(username);
-  }
-}, [username]);
-
 const [utm, setUtm] = useState("");
 const [totalRevenue, setTotalRevenue] = useState(0);
 const [totalRPM, setTotalRPM] = useState(0);
@@ -28,8 +20,9 @@ const [totalUsers, setTotalUsers] = useState(0);
 const [campaignData, setCampaignData] = useState([]);
 const [hideReset, setHideReset] = useState(true);
 const [showStats, setShowStats] = useState(false);
-  const [utm, setUtm] = useState("");
+const [utm, setUtm] = useState("");
 
+// 🔁 Sync username to utm automatically
 useEffect(() => {
   if (username && utm !== username) {
     setUtm(username);
