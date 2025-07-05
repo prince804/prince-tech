@@ -18,7 +18,7 @@ export default function Dashboard() {
   const [totalUsers, setTotalUsers] = useState(0);
   const [campaignData, setCampaignData] = useState([]);
   const [hideReset, setHideReset] = useState(true);
-  const [showPass, setShowPass] = useState(false);
+  const [utm, setUtm] = useState("");
   const [showStats, setShowStats] = useState(false);
   const utm = username;
 
@@ -43,8 +43,8 @@ export default function Dashboard() {
     document.title = "Dashboard | prince-tech";
     // Get the username from cookies after the component has mounted
     const storedUsername = Cookies.get("username");
-    if (storedUsername) {
-      setUsername(storedUsername);
+if (storedUsername && storedUsername.length < 25) {
+  setUsername(storedUsername);
     }
     getAdmin();
     setTotalRevenue(Number(localStorage.getItem("totalRevenue")));
@@ -54,12 +54,15 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
+    useEffect(() => {
+  if (utm) {
     fetchUtmData();
-    if (username != "") {
-      getPaymentsData(username);
-    }
-  }, [utm]);
-  useEffect(() => {
+    getPaymentsData(utm);
+  }
+}, [utm]);
+  useEffect((- const utm = username;
++ const [utm, setUtm] = useState("");
+) => {
     if (totalRevenue != 0) {
       localStorage.setItem("totalRevenue", totalRevenue);
       localStorage.setItem("totalRPM", totalRPM);
