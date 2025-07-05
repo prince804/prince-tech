@@ -10,7 +10,15 @@ import { toast } from "react-toastify";
 
 export default function Dashboard() {
   const router = useRouter();
-const [username, setUsername] = useState("");
+const [utm, setUtm] = useState("");
+
+// 🔁 Sync username to utm automatically
+useEffect(() => {
+  if (username && utm !== username) {
+    setUtm(username);
+  }
+}, [username]);
+
 const [utm, setUtm] = useState("");
 const [totalRevenue, setTotalRevenue] = useState(0);
 const [totalRPM, setTotalRPM] = useState(0);
