@@ -20,13 +20,15 @@ const [totalUsers, setTotalUsers] = useState(0);
 const [campaignData, setCampaignData] = useState([]);
 const [hideReset, setHideReset] = useState(true);
 const [showStats, setShowStats] = useState(false);
+// ✅ utm state and auto sync with username
+const [utm, setUtm] = useState("");
 
-// 🔁 Sync username to utm automatically
+// 🔁 Sync utm whenever username updates
 useEffect(() => {
-  setUtm(username);
+  if (username) {
+    setUtm(username);
+  }
 }, [username]);
-
-
   const {
     register,
     handleSubmit,
