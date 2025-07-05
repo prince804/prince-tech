@@ -21,10 +21,11 @@ const [campaignData, setCampaignData] = useState([]);
 const [hideReset, setHideReset] = useState(true);
 const [showStats, setShowStats] = useState(false);
 
-// This effect will sync username → utm
+// 🔁 Sync username to utm automatically
 useEffect(() => {
   setUtm(username);
 }, [username]);
+
 
   const {
     register,
@@ -58,12 +59,12 @@ if (storedUsername && storedUsername.length < 25) {
   }, []);
 
   useEffect(() => {
-    useEffect(() => {
-  if (utm) {
+  if (utm !== "") {
     fetchUtmData();
     getPaymentsData(utm);
   }
 }, [utm]);
+  
   useEffect((- const utm = username;
 + const [utm, setUtm] = useState("");
 ) => {
