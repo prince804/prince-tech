@@ -20,6 +20,14 @@ const [totalUsers, setTotalUsers] = useState(0);
 const [campaignData, setCampaignData] = useState([]);
 const [hideReset, setHideReset] = useState(true);
 const [showStats, setShowStats] = useState(false);
+  const [utm, setUtm] = useState("");
+
+useEffect(() => {
+  if (username && utm !== username) {
+    setUtm(username);
+  }
+}, [username]);
+
 // ✅ utm state and auto sync with username
 const [utm, setUtm] = useState("");
 
