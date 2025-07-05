@@ -10,17 +10,21 @@ import { toast } from "react-toastify";
 
 export default function Dashboard() {
   const router = useRouter();
-  const [username, setUsername] = useState("");
-  const [totalRevenue, setTotalRevenue] = useState(0);
-  const [totalRPM, setTotalRPM] = useState(0);
-  const [maxRevenue, setMaxRevenue] = useState(0.0);
-  const [maxRPM, setMaxRPM] = useState(0);
-  const [totalUsers, setTotalUsers] = useState(0);
-  const [campaignData, setCampaignData] = useState([]);
-  const [hideReset, setHideReset] = useState(true);
-  const [utm, setUtm] = useState("");
-  const [showStats, setShowStats] = useState(false);
-  const utm = username;
+const [username, setUsername] = useState("");
+const [utm, setUtm] = useState("");
+const [totalRevenue, setTotalRevenue] = useState(0);
+const [totalRPM, setTotalRPM] = useState(0);
+const [maxRevenue, setMaxRevenue] = useState(0.0);
+const [maxRPM, setMaxRPM] = useState(0);
+const [totalUsers, setTotalUsers] = useState(0);
+const [campaignData, setCampaignData] = useState([]);
+const [hideReset, setHideReset] = useState(true);
+const [showStats, setShowStats] = useState(false);
+
+// This effect will sync username → utm
+useEffect(() => {
+  setUtm(username);
+}, [username]);
 
   const {
     register,
